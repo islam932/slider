@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Tahoma, Arial;
+    user-select: none;
+}
+.slider-container {
+    margin: 10px auto;
+    width: 720px;
+    height: 405px;
+    position: relative;
+}
+
+.slider-container img {
+    position: absolute;
+    opacity: 0;
+    transition: opacity .5s;
+    z-index: 1;
+    width: 720px;
+    height: 405px;
+    border-radius: 50px;
+    border: 5px solid #6682ff;
+}
+
+.slider-container img.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.slider-container .slide-number {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    background-color: rgba(0, 0, 0, .6);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 11px;
+    z-index: 3;
+    border-radius: 6px;
+    user-select: text;
+}
+
+.slider-controls {
+    width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider-controls .prev,
+.slider-controls .next {
+    background-color: #009688;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 5px;
+    width: 20%;
+    transition: .1s;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.slider-controls .prev:hover,
+.slider-controls .next:hover {
+    background-color: #00d7c2;
+}
+
+.slider-controls .prev {
+    float: left;
+}
+
+.slider-controls .next {
+    float: right;
+}
+
+.slider-controls .indicators {
+    width: 60%;
+    float: left;
+}
+
+.slider-controls .indicators ul {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+
+.slider-controls .indicators ul li {
+    display: inline-block;
+    background-color: #b3b3b3;
+    color: #333;
+    font-weight: bold;
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
+    margin: 2px 2px;
+    padding: 0 1px 0 0;
+    line-height: 30px;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.slider-controls .indicators ul li:hover {
+    background-color: #dbdbdb;
+}
+
+.slider-controls .indicators ul li.active {
+    background-color: #009688;
+    color: #fff;
+    cursor: default;
+}
